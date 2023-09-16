@@ -4,7 +4,7 @@
 LC-3 Processor written in VHDL
 
 # Memory & I/O
-- [ ] MARMUX
+- [X] MARMUX
 - [X] MAR
 - [X] MDR
 - [ ] Memory
@@ -15,13 +15,13 @@ LC-3 Processor written in VHDL
 # Data Path
 - [X] GateMARMUX
 - [X] GatePC
-- [ ] PC (Program Counter)
-- [ ] PCMUX (Program Counter MUX)
+- [X] PC (Program Counter)
+- [X] PCMUX (Program Counter MUX)
 - [X] Register File
-- [ ] ZExt (Zero Extend)
-- [ ] MUX (Multiplexor)
-- [ ] SExt (Sign Extend)
-- [ ] SR2MUX (Source Register 2 MUX)
+- [X] ZExt (Zero Extend)
+- [X] MUX (Multiplexor)
+- [X] SExt (Sign Extend)
+- [X] SR2MUX (Source Register 2 MUX)
 - [X] GateALU
 - [X] ALU (Arithmetic and Logic Unit)
 - [X] IR (Instruction Register)

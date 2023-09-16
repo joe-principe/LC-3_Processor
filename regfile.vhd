@@ -28,7 +28,7 @@ architecture beh of regfile is
     type t_register is array (0 to 7) of std_logic_vector(15 downto 0);
     signal r_mem : t_mem := (others => (others => '0'));
 begin
-    p_rf : process (i_clk) is
+    p_rf : process(i_clk) is
     begin
         if rising_edge(i_clk) then
             if i_ld_reg = '0' then

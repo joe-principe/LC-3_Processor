@@ -20,7 +20,7 @@ end logic;
 
 architecture beh of logic is
 begin
-    p_logic : process (i_clk) is
+    p_logic : process(i_clk) is
     begin
         if rising_edge(i_clk) then
             if i_val(15) = '1' then

@@ -18,7 +18,7 @@ end tsb;
 
 architecture beh of tsb is
 begin
-    p_tsb : process (i_clk) is
+    p_tsb : process(i_clk) is
     begin
         if rising_edge(i_clk) then
             case (i_en) is

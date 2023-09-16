@@ -25,7 +25,7 @@ end reg;
 architecture beh of reg is
     signal r_mem : std_logic_vector(15 downto 0) := (others => '0');
 begin
-    p_reg : process (i_clk) is
+    p_reg : process(i_clk) is
     begin
         if rising_edge(i_clk) then
             if i_ld = '1' then

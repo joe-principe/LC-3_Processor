@@ -29,7 +29,7 @@ architecture beh of nzp is
     signal r_z : std_logic := '0';
     signal r_p : std_logic := '0';
 begin
-    p_nzp : process (i_clk) is
+    p_nzp : process(i_clk) is
     begin
         if rising_edge(i_clk) then
             if i_ldcc = '1' then

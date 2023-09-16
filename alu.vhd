@@ -23,7 +23,7 @@ architecture beh of alu is
     signal r_a : signed := 0;
     signal r_b : signed := 0;
 begin
-    p_op : process (i_clk) is
+    p_op : process(i_clk) is
     begin
         if rising_edge(i_clk) then
             r_a <= signed(i_a);
