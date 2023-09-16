@@ -8,7 +8,7 @@ use ieee.numeric_std.all;
 -- o_val: 16-bit sign extended output value
 entity sext is
     generic(
-            g_input_len : natural;
+            g_input_len : natural
            );
     port(
             i_clk : in  std_logic;
