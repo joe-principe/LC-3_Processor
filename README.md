@@ -19,7 +19,7 @@ LC-3 Processor written in VHDL
 - [X] PCMUX (Program Counter MUX)
 - [X] Register File
 - [X] ZExt (Zero Extend)
-- [X] MUX (Multiplexor)
+- [X] MUX (Multiplexer)
 - [X] SExt (Sign Extend)
 - [X] SR2MUX (Source Register 2 MUX)
 - [X] GateALU

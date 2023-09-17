@@ -18,28 +18,11 @@ entity sext is
 end sext;
 
 architecture beh of sext is
-    signal r_mem : std_logic_vector(15 downto 0) := (others => '1');
 begin
     p_sext : process(i_clk) is
     begin
         if rising_edge(i_clk) then
-            -- First, copy i_val bits to r_mem
-            for ii in 0 to g_input_len - 1 loop
-                r_mem(ii) <= i_val(ii);
-            end loop;
-
-            -- Next, sign extend by checking if i_val is positive or negative
-            if i_val(g_input_len - 1) = '1' then
-                for ii in 15 downto g_input_len loop
-                    r_mem(ii) <= '1';
-                end loop;
-            else
-                for ii in 15 downto g_input_len loop
-                    r_mem(ii) <= '0';
-                end loop;
-            end if;
-
-            o_val <= r_mem;
+            o_val <= resize(signed(i_val), o_val'length);
         end if;
     end process p_sext;
 end beh;

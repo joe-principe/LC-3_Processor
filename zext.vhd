@@ -15,15 +15,11 @@ entity zext is
 end zext;
 
 architecture beh of zext is
-    signal r_mem : std_logic_vector(15 downto 0) := (others => '0');
 begin
     p_zext : process(i_clk) is
     begin
         if rising_edge(i_clk) then
-            for ii in 0 to i_val'length - 1 loop
-                r_mem(ii) <= i_val(ii);
-            end loop;
-            o_val <= r_mem;
+            o_val <= resize(unsigned(i_val), o_val'length);
         end if;
     end process p_zext;
 end beh;

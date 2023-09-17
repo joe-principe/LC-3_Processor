@@ -25,8 +25,7 @@ entity regfile is
 end regfile;
 
 architecture beh of regfile is
-    type t_register is array (0 to 7) of std_logic_vector(15 downto 0);
-    signal r_mem : t_mem := (others => (others => '0'));
+    signal r_mem : t_word_array(0 to 7) := (others => (others => '0'));
 begin
     p_rf : process(i_clk) is
     begin

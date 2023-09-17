@@ -28,7 +28,7 @@ begin
     p_mux : process(i_clk) is
     begin
         if rising_edge(i_clk) then
-            o_val <= i_val(i_sel);
+            o_val <= i_val(to_integer(unsigned(i_sel)));
         end if;
     end process p_mux;
 end beh;
