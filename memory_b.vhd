@@ -15,7 +15,7 @@ use work.array_package.all;
 -- I/O Definition
 -- i_clk:    1-bit clock input
 -- i_rw:     1-bit read/write choice input
--- i_mem_en: 1-bit memory enable input
+-- i_mio_en: 1-bit memory enable input
 -- i_mar:    16-bit memory address register input
 -- i_mdr:    16-bit memory data register input
 -- o_r:      1-bit end of memory operation control signal output
@@ -24,11 +24,11 @@ entity memory is
     port(
             i_clk    : in  std_logic;
             i_rw     : in  std_logic;
-            i_mem_en : in  std_logic;
+            i_mio_en : in  std_logic;
             i_mar    : in  std_logic_vector(15 downto 0);
             i_mdr    : in  std_logic_vector(15 downto 0);
             o_r      : out std_logic;
-            o_val    : out std_logic_vector(15 downto 0);
+            o_val    : out std_logic_vector(15 downto 0)
         );
 end memory;
 
@@ -37,7 +37,7 @@ architecture beh of memory is
 begin
     p_mem : process(i_clk) is
     begin
-        if rising_edge(i_clk) AND i_mem_en = '1' then
+        if rising_edge(i_clk) AND i_mio_en = '1' then
             if i_rw = '0' then
                 o_r <= '0';
                 o_val <= r_mem(to_integer(unsigned(i_mar)));
