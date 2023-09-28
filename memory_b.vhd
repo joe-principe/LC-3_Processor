@@ -5,6 +5,13 @@ use ieee.numeric_std.all;
 library work;
 use work.array_package.all;
 
+-- NOTE: The lc3tools program on github has some initial locations in memory
+-- defined for different system operations (like PUTS). Until I learn how to
+-- initialize memory with these values (ie, I copy them all over to this
+-- program), I will not consider memory to be complete
+--
+-- Link to github repo: https://github.com/chiragsakhuja/lc3tools
+
 -- I/O Definition
 -- i_clk:    1-bit clock input
 -- i_rw:     1-bit read/write choice input
@@ -25,7 +32,6 @@ entity memory is
         );
 end memory;
 
--- TODO: Figure out how I'm supposed to set R
 architecture beh of memory is
     signal r_mem : t_word_array(0 to 65535) := (others => (others => '0'));
 begin
