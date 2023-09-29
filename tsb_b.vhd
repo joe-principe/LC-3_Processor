@@ -2,6 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+-- NOTE: TSB is a tri-state buffer, they are the triangle gates on the datapath
+
 -- I/O Definition
 -- i_en:  1-bit enable input signal for the tri-state buffer
 -- i_clk: 1-bit clock input signal
